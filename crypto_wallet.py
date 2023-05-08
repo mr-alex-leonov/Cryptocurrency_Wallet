@@ -1,11 +1,6 @@
 # Cryptocurrency Wallet
 ################################################################################
 
-# This file contains the Ethereum transaction functions that you have created throughout this module’s lessons.
-# By using import statements, you will integrate this `crypto_wallet.py` Python script
-# into the KryptoJobs2Go interface program that is found in the `krypto_jobs.py` file.
-
-################################################################################
 # Imports
 import os
 import requests
@@ -69,7 +64,7 @@ def send_transaction(w3, account, to, wage):
         "from": account.address,
         "value": value,
         "gas": gasEstimate,
-        "gasPrice": 0,
+        "gasPrice": 123456789000,
         "nonce": w3.eth.getTransactionCount(account.address),
     }
 
